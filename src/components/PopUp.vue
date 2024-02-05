@@ -81,10 +81,10 @@ export default {
         isValid = true
         this.nameError = ''
       } else if (!regExpName.test(name) && name) {
-        isValid = false
+        
         this.nameError = 'Имя введено некорректно'
       } else if (!name) {
-        isValid = false
+        
         this.nameError = 'Обязательное поле'
       }
       return isValid
@@ -102,6 +102,7 @@ export default {
       } else if (!email) {
         this.emailError = 'Обязательное поле'
       }
+
       return isValid
     },
 
@@ -134,6 +135,10 @@ export default {
     },
 
     async submit() {
+      this.isNameValid(this.name)
+      this.isPhoneValid(this.phone)
+      this.isEmailValid(this.email)
+
       if (this.isEmailValid(this.email) == true && this.isNameValid(this.name) == true && this.isPhoneValid(this.phone) == true) {
 
         const url = 'http://hh.autodrive-agency.ru/test-tasks/front/task-7/'
