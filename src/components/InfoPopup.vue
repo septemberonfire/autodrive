@@ -22,13 +22,11 @@ export default {
 
 <style scoped>
 .popup-bg {
-  z-index: 2;
-  @apply absolute bg-black flex justify-center items-center bg-opacity-50 w-full h-screen
+  @apply absolute bg-black flex justify-center items-center bg-opacity-50 w-full h-screen z-10
 }
 
 .popup {
-  z-index: 3;
-  @apply relative bg-neutral-50 rounded-lg opacity-100 p-12 min-w-80 flex flex-col gap-4
+  @apply relative bg-neutral-50 rounded-lg opacity-100 p-12 min-w-80 flex flex-col gap-4 z-20
 }
 
 .btn-submit {

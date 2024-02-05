@@ -166,13 +166,11 @@ export default {
 
 <style scoped>
 .popup-bg {
-  z-index: 2;
-  @apply absolute bg-black flex justify-center items-center bg-opacity-50
+  @apply absolute bg-black flex justify-center items-center bg-opacity-50 z-10
 }
 
 .popup {
-  z-index: 3;
-  @apply relative bg-neutral-50 rounded-lg opacity-100 p-12 min-w-80
+  @apply relative bg-neutral-50 rounded-lg opacity-100 p-12 min-w-80 z-20
 }
 
 .btn-close {
@@ -201,7 +199,7 @@ export default {
 }
 
 .popup-input::placeholder {
-  color: transparent;
+  @apply text-transparent
 }
 
 .input-warning {
